@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:delego/Components/my_drawer.dart';
-import 'package:delego/pages/profil_page.dart';
-import 'package:delego/pages/room_page.dart';
-import 'package:delego/pages/schedule_page.dart';
+import 'package:delego/Pages/Home Page/my_drawer.dart';
+import 'package:delego/Pages/Profile Page/profil_page.dart';
+import 'package:delego/Pages/room_page.dart';
+import 'package:delego/Pages/Schedule Page/schedule_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

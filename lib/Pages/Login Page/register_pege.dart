@@ -1,27 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:delego/pages/Login%20Page/my_bottons.dart';
 import 'package:delego/pages/Login%20Page/my_textfild.dart';
-import 'package:delego/pages/Login%20Page/register_pege.dart';
-import 'package:delego/pages/home_page.dart';
 
 
-class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
 
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
+class RegisterPage extends StatelessWidget {
+  RegisterPage({super.key});
 
-class _LoginPageState extends State<LoginPage> {
   // text editing controllers
   final usernameController = TextEditingController();
-
   final passwordController = TextEditingController();
-
+  final confirmPasswordController = TextEditingController();
+  final firstNameController = TextEditingController();
+  final lastNameController =TextEditingController();
   // sign user in method
-  void signUserIn() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-  }
+  void signUserUp() {}
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
 
                 // logo
                 Icon(
@@ -56,6 +49,20 @@ class _LoginPageState extends State<LoginPage> {
 
                 const SizedBox(height: 50),
 
+                // FirstName textfild
+                MyTextField(controller: firstNameController,
+                    hintText: 'First Name',
+                    obscureText: false),
+
+                const SizedBox(height: 10),
+
+                // LastName textfild
+                MyTextField(controller: firstNameController,
+                    hintText: 'Last Name',
+                    obscureText: false),
+
+                const SizedBox(height: 10),
+
                 // username textfield
                 MyTextField(
                   controller: usernameController,
@@ -71,39 +78,24 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: 'Password',
                   obscureText: true,
                 ),
-
                 const SizedBox(height: 10),
 
-                // forgot password?
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                        // style if needed
-                        onPressed: () { },
-                        child: Text(
-                          'Forgot Password?',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.blue.shade900),
-                        ),
-                      ),
-                    ],
-                  ),
+                // confirm password textfield
+                MyTextField(
+                  controller: confirmPasswordController,
+                  hintText: 'Confirm Password',
+                  obscureText: true,
                 ),
 
-                const SizedBox(height: 25),
+                const SizedBox(height: 15),
 
-                // sign in button
+                // sign up button
                 MyButton(
-                  text: 'Login',
-                  onTap: signUserIn,
+                  text: 'Sign Up',
+                  onTap: signUserUp,
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
 
 
                 // not a member? register now
@@ -111,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not a member?',
+                      'Already a member?',
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.grey[700]),
@@ -119,19 +111,18 @@ class _LoginPageState extends State<LoginPage> {
                     TextButton(
                       // style if needed
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => RegisterPage(),));
+                        Navigator.pop(context);
                       },
                       child:Text(
-                        'Sign Up',
+                        'Login',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 18,
                           color: Colors.blue.shade900,
                           fontWeight: FontWeight.w900,
                         ),
                       ),
                     ),
-                    const SizedBox(width: 6),
+                    const SizedBox(width: 4),
                   ],
                 )
               ],

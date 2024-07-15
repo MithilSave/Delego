@@ -3,7 +3,7 @@ import 'package:delego/models/shedule.dart';
 import 'package:delego/constants/fonts.dart';
 import 'package:delego/constants/text_style.dart';
 import 'package:delego/constants/separator.dart';
-import 'package:delego/Components/schedule_details.dart';
+import 'package:delego/Pages/Schedule Page/schedule_details.dart';
 
 class ScheduleSummary extends StatelessWidget {
   final Schedule schedule;

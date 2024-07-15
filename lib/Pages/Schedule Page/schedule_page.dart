@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:delego/Components/schedule_pagebody.dart';
+import 'package:delego/Pages/Schedule Page/schedule_pagebody.dart';
 
 class SchedulePage extends StatelessWidget {
   const SchedulePage({super.key});

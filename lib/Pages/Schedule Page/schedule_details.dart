@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:delego/models/shedule.dart';
-import 'package:delego/Components/schedule_cards.dart';
+import 'package:delego/Pages/SChedule Page/schedule_cards.dart';
 import 'package:delego/constants/separator.dart';
 import 'package:delego/constants/text_style.dart';
 

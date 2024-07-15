@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:delego/pages/Login%20Page/my_bottons.dart';
-import 'package:delego/pages/Login%20Page/my_textfild.dart';
+import 'package:delego/pages/Login Page/my_bottons.dart';
+import 'package:delego/pages/Login Page/my_textfild.dart';
+import 'package:delego/pages/Login Page/register_pege.dart';
+import 'package:delego/Pages/Home Page/home_page.dart';
 
 
+class LoginPage extends StatefulWidget {
+  LoginPage({super.key});
 
-class RegisterPage extends StatelessWidget {
-  RegisterPage({super.key});
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
 
+class _LoginPageState extends State<LoginPage> {
   // text editing controllers
   final usernameController = TextEditingController();
+
   final passwordController = TextEditingController();
-  final confirmPasswordController = TextEditingController();
+
   // sign user in method
-  void signUserUp() {}
+  void signUserIn() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,24 +71,36 @@ class RegisterPage extends StatelessWidget {
                   hintText: 'Password',
                   obscureText: true,
                 ),
+
                 const SizedBox(height: 10),
 
-                // confirm password textfield
-                MyTextField(
-                  controller: confirmPasswordController,
-                  hintText: 'Confirm Password',
-                  obscureText: true,
+                // forgot password?
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(
+                        // style if needed
+                        onPressed: () { },
+                        child: Text(
+                          'Forgot Password?',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.blue.shade900),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-
-                const SizedBox(height: 10),
-
 
                 const SizedBox(height: 25),
 
-                // sign up button
+                // sign in button
                 MyButton(
-                  text: 'Sign Up',
-                  onTap: signUserUp,
+                  text: 'Login',
+                  onTap: signUserIn,
                 ),
 
                 const SizedBox(height: 50),
@@ -90,7 +111,7 @@ class RegisterPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Already a member?',
+                      'Not a member?',
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.grey[700]),
@@ -98,18 +119,19 @@ class RegisterPage extends StatelessWidget {
                     TextButton(
                       // style if needed
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => RegisterPage(),));
                       },
                       child:Text(
-                        'Login',
+                        'Sign Up',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: Colors.blue.shade900,
                           fontWeight: FontWeight.w900,
                         ),
                       ),
                     ),
-                    const SizedBox(width: 4),
+                    const SizedBox(width: 6),
                   ],
                 )
               ],

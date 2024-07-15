@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:delego/models/shedule.dart';
-import 'package:delego/Components/schedule_cards.dart';
+import 'package:delego/Pages/Schedule Page/schedule_cards.dart';
 
 class ShedulePageBody extends StatelessWidget {
   const ShedulePageBody({super.key});
