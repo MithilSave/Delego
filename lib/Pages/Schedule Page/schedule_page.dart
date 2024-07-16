@@ -8,52 +8,53 @@ class SchedulePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      child: new Scaffold(
+      child: Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: new AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.blue.shade900,
-          title: new Text("Schedule"),
-          bottom: new TabBar(
+          centerTitle: true,
+          title: Text("Schedule"),
+          bottom: TabBar(
             indicatorColor: Colors.white,
             tabs: <Widget>[
-              new Tab(
+               Tab(
                 text: "Day 1",
               ),
-              new Tab(
+               Tab(
                 text: "Day 2",
               ),
-              new Tab(
+               Tab(
                 text: "Day 3",
               ),
             ],
           ),
         ),
-        body: new TabBarView(
+        body: TabBarView(
           children: <Widget>[
-            new Scaffold(
-              body: new Column(
+             Scaffold(
+              body: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  new GradientAppBar(" November 3 , 2023"),
-                  new ShedulePageBody(),
+                   GradientAppBar(" November 3 , 2023"),
+                   ShedulePageBody(),
                 ],
               ),
             ),
-            new Scaffold(
-              body: new Column(
+             Scaffold(
+              body: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new GradientAppBar("Novemeber 4, 2023"),
-                  new HomePageBodyDay2(),
+                   GradientAppBar("Novemeber 4, 2023"),
+                   HomePageBodyDay2(),
                 ],
               ),
             ),
-            new Scaffold(
-              body: new Column(
+             Scaffold(
+              body: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new GradientAppBar("November 5, 2023"),
-                  new HomePageBodyDay3(),
+                   GradientAppBar("November 5, 2023"),
+                   HomePageBodyDay3(),
                 ],
               ),
             ),
@@ -74,11 +75,11 @@ class GradientAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final double statusBarHeight = MediaQuery.of(context).padding.top;
 
-    return new Container(
-      padding: new EdgeInsets.only(top: statusBarHeight),
+    return Container(
+      padding: EdgeInsets.only(top: statusBarHeight),
       height: statusBarHeight + barHeight,
-      child: new Center(
-        child: new Text(
+      child: Center(
+        child: Text(
           title,
           style: TextStyle(
               color: Colors.blue.shade900,
