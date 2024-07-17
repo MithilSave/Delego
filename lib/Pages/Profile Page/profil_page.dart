@@ -83,11 +83,23 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           // Email
           MyTextBox(
-            text: 'Email Adress',
+            text: 'Email Address',
             sectionName: 'Email',
             onPressed: ()=> editField('Email'),
+           ),
+          //Name
+          MyTextBox(
+            text: 'Mithil Save',
+            sectionName: 'Name',
+            onPressed: ()=> editField('Name'),
+          ),
+          //Contact
+          MyTextBox(
+            text: '755******5',
+            sectionName: 'Contact No',
+            onPressed: ()=> editField('Email'),
+          ),
 
-           )
         ],
       ),
     );
