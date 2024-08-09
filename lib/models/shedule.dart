@@ -39,7 +39,7 @@ List<Schedule> schedules = [
     id: "3",
     name: "Lunch",
     location: "MPSTME",
-    time: "03:30 - 04:00PM",
+    time: "12:00 - 01:00PM",
     description:
     "Delight your palate by feasting on the splendid meals provided by our organizing committee which is customary in maintaining our long standing tradition of delivering unmatched hospitality and comfort to all our delegates.",
     image: "assets/img/lunch.jpeg",
@@ -188,7 +188,7 @@ List<Schedule> schedules2 = [
     id: "6",
     name: "Closing Ceremony",
     location: "Mukesh Patel Auditorium",
-    time: "04:00 - 04:00PM",
+    time: "04:30 - 05:30PM",
     description:
     "The time has come to bid adieu to what has hopefully been an enchanting experience, here at Mumbai MUN 2023. Participate in an elegant ceremony that not only celebrates the best diplomatic skills across all committees but also the alluring spirit of diplomacy!",
     image: "assets/img/ceremony.jpg",

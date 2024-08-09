@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyTextBox extends StatelessWidget {
+class MyTextBox extends StatefulWidget {
   final String text;
   final String sectionName;
   final void Function ()?onPressed;
@@ -11,6 +11,11 @@ class MyTextBox extends StatelessWidget {
     required this.onPressed,
   });
 
+  @override
+  State<MyTextBox> createState() => _MyTextBoxState();
+}
+
+class _MyTextBoxState extends State<MyTextBox> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +32,7 @@ class MyTextBox extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(sectionName,
+              Text(widget.sectionName,
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Poppins'
@@ -36,7 +41,7 @@ class MyTextBox extends StatelessWidget {
 
               //edit botton
               IconButton(
-                  onPressed:onPressed,
+                  onPressed:widget.onPressed,
                   icon: Icon(
                     Icons.edit_outlined,
                     color: Colors.blue.shade900,
@@ -45,7 +50,7 @@ class MyTextBox extends StatelessWidget {
           ),
 
           //text
-          Text(text,
+          Text(widget.text,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontFamily: 'Poppins'

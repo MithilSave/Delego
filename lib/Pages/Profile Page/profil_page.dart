@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:delego/Pages/Profile Page/text_box.dart';
 
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -97,9 +98,8 @@ class _ProfilePageState extends State<ProfilePage> {
           MyTextBox(
             text: '755******5',
             sectionName: 'Contact No',
-            onPressed: ()=> editField('Email'),
+            onPressed: ()=> editField('contact'),
           ),
-
         ],
       ),
     );
