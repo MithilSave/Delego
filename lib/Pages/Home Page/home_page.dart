@@ -4,6 +4,7 @@ import 'package:delego/Pages/Home Page/my_drawer.dart';
 import 'package:delego/Pages/Profile Page/profil_page.dart';
 import 'package:delego/Pages/room_page.dart';
 import 'package:delego/Pages/Schedule Page/schedule_page.dart';
+import 'package:delego/Pages/Profile Page/Pre_Mun.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -64,6 +65,22 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SchedulePage(),));
+              },
+              child: Text('Schedule',
+                style: TextStyle(
+                  color: Colors.white,
+                ),),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade900),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PreMunList(),));
               },
               child: Text('Schedule',
                 style: TextStyle(

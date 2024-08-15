@@ -1,3 +1,4 @@
+import 'package:delego/Pages/Profile%20Page/Pre_Mun.dart';
 import 'package:flutter/material.dart';
 import 'package:delego/Pages/Profile Page/text_box.dart';
 
@@ -100,6 +101,11 @@ class _ProfilePageState extends State<ProfilePage> {
             sectionName: 'Contact No',
             onPressed: ()=> editField('contact'),
           ),
+          MyTextBox(text: '29-01-2005',
+              sectionName: 'DoB',
+              onPressed:()=> editField("DoB")
+          ),
+
         ],
       ),
     );
